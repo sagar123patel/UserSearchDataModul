@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Index Page</title>
+    <link rel="stylesheet" href="/signup.css">
+</head>
+<body>
+    <div th:insert="navbar :: navbar"></div> <!-- Correct fragment inclusion -->
+
+    <form th:action="@{/index}" th:object="${admin}" method="post">
+        <h1>Admin Registration</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}" required />
+        <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div><br/>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" th:field="*{address}" required />
+        <div th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></div><br/>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Information</title>
+    <link rel="stylesheet" href="/submittedInfo.css">
+</head>
+<body>
+    <div th:replace="navbar :: navbar"></div> <!-- Include Navbar -->
+
+    <div>
+        <h1>Admin Data Submission Successful!</h1>
+        <p>Name: <span th:text="${admin.name}"></span></p>
+        <p>Address: <span th:text="${admin.address}"></span></p>
+    </div>
+</body>
+</html>

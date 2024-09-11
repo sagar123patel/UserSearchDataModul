@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Navbar</title>
+    <link rel="stylesheet" href="/navbar.css"> <!-- Optional CSS -->
+</head>
+<body>
+    <div th:fragment="navbar">
+        <nav>
+            <ul>
+                <li><a th:href="@{/index}">Home</a></li>
+                <li><a th:href="@{/admins}">Admin List</a></li>
+                <li><a th:href="@{/addAdminForm}">Add Admin</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
